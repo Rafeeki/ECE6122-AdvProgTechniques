@@ -1,0 +1,202 @@
+==27640== Memcheck, a memory error detector
+==27640== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==27640== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==27640== Command: ./testVec 1
+==27640== 
+--27640-- Valgrind options:
+--27640--    --leak-check=full
+--27640--    -v
+--27640-- Contents of /proc/version:
+--27640--   Linux version 2.6.32-642.11.1.el6.x86_64 (mockbuild@x86-027.build.eng.bos.redhat.com) (gcc version 4.4.7 20120313 (Red Hat 4.4.7-17) (GCC) ) #1 SMP Wed Oct 26 10:25:23 EDT 2016
+--27640-- Arch and hwcaps: AMD64, amd64-sse3-cx16-lzcnt-avx-bmi
+--27640-- Page sizes: currently 4096, max supported 4096
+--27640-- Valgrind library directory: /usr/lib64/valgrind
+--27640-- Reading syms from /nethome/rgentry8/VTest/testVec
+--27640-- Reading syms from /usr/lib64/valgrind/memcheck-amd64-linux
+--27640--    object doesn't have a dynamic symbol table
+--27640-- Reading syms from /lib64/ld-2.12.so
+--27640-- Scheduler: using generic scheduler lock implementation.
+--27640-- Reading suppressions file: /usr/lib64/valgrind/default.supp
+==27640== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-27640-by-rgentry8-on-deepthought19
+==27640== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-27640-by-rgentry8-on-deepthought19
+==27640== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-27640-by-rgentry8-on-deepthought19
+==27640== 
+==27640== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==27640== don't want to do, unless you know exactly what you're doing,
+==27640== or are doing some strange experiment):
+==27640==   /usr/lib64/valgrind/../../bin/vgdb --pid=27640 ...command...
+==27640== 
+==27640== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==27640==   /path/to/gdb ./testVec
+==27640== and then give GDB the following command
+==27640==   target remote | /usr/lib64/valgrind/../../bin/vgdb --pid=27640
+==27640== --pid is optional if only one valgrind process is running
+==27640== 
+--27640-- REDIR: 0x30f5c17d10 (strlen) redirected to 0x38049551 (vgPlain_amd64_linux_REDIR_FOR_strlen)
+--27640-- Reading syms from /usr/lib64/valgrind/vgpreload_core-amd64-linux.so
+--27640-- Reading syms from /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so
+--27640-- REDIR: 0x30f5c17b20 (index) redirected to 0x4a07c30 (index)
+--27640-- REDIR: 0x30f5c17ba0 (strcmp) redirected to 0x4a08570 (strcmp)
+--27640-- Reading syms from /usr/lib64/libstdc++.so.6.0.13
+--27640--    object doesn't have a symbol table
+--27640-- Reading syms from /lib64/libm-2.12.so
+--27640-- Reading syms from /lib64/libgcc_s-4.4.7-20120601.so.1
+--27640--    object doesn't have a symbol table
+--27640-- Reading syms from /lib64/libc-2.12.so
+--27640-- REDIR: 0x30f6084e60 (strcasecmp) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--27640-- REDIR: 0x30f6087120 (strncasecmp) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--27640-- REDIR: 0x30f6082dd0 (__GI_strrchr) redirected to 0x4a07ab0 (__GI_strrchr)
+--27640-- REDIR: 0x30f60812f0 (__GI_strlen) redirected to 0x4a07fb0 (__GI_strlen)
+--27640-- REDIR: 0x30f607f870 (strcmp) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--27640-- REDIR: 0x30f607f8b0 (__GI_strcmp) redirected to 0x4a08520 (__GI_strcmp)
+--27640-- REDIR: 0x30f60812b0 (strlen) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--27640-- REDIR: 0x30f6089800 (memcpy) redirected to 0x4a08b60 (memcpy)
+Starting Test1
+--27640-- REDIR: 0x30f607aba0 (malloc) redirected to 0x4a069ac (malloc)
+--27640-- REDIR: 0x345a6bd0a0 (operator new(unsigned long)) redirected to 0x4a0757a (operator new(unsigned long))
+--27640-- REDIR: 0x30f6080d00 (strcpy) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--27640-- REDIR: 0x30f6080d30 (__GI_strcpy) redirected to 0x4a080a0 (__GI_strcpy)
+--27640-- REDIR: 0x30f607ba00 (free) redirected to 0x4a063a9 (free)
+--27640-- REDIR: 0x345a6bb2f0 (operator delete(void*)) redirected to 0x4a05f8f (operator delete(void*))
+Test1 results
+--27640-- REDIR: 0x30f6084690 (mempcpy) redirected to 0x4a0a020 (mempcpy)
+Hello from string front 49
+Hello from string front 48
+Hello from string front 47
+Hello from string front 46
+Hello from string front 45
+Hello from string front 44
+Hello from string front 43
+Hello from string front 42
+Hello from string front 41
+Hello from string front 40
+Hello from string front 39
+Hello from string front 38
+Hello from string front 37
+Hello from string front 36
+Hello from string front 35
+Hello from string front 34
+Hello from string front 33
+Hello from string front 32
+Hello from string front 31
+Hello from string front 30
+Hello from string front 29
+Hello from string front 28
+Hello from string front 27
+Hello from string front 26
+Hello from string front 25
+Hello from string front 24
+Hello from string front 23
+Hello from string front 22
+Hello from string front 21
+Hello from string front 20
+Hello from string front 19
+Hello from string front 18
+Hello from string front 17
+Hello from string front 16
+Hello from string front 15
+Hello from string front 14
+Hello from string front 13
+Hello from string front 12
+Hello from string front 11
+Hello from string front 10
+Hello from string front 9
+Hello from string front 8
+Hello from string front 7
+Hello from string front 6
+Hello from string front 5
+Hello from string front 4
+Hello from string front 3
+Hello from string front 2
+Hello from string front 1
+Hello from string front 0
+Hello from string back 0
+Hello from string back 1
+Hello from string back 2
+Hello from string back 3
+Hello from string back 4
+Hello from string back 5
+Hello from string back 6
+Hello from string back 7
+Hello from string back 8
+Hello from string back 9
+Hello from string back 10
+Hello from string back 11
+Hello from string back 12
+Hello from string back 13
+Hello from string back 14
+Hello from string back 15
+Hello from string back 16
+Hello from string back 17
+Hello from string back 18
+Hello from string back 19
+Hello from string back 20
+Hello from string back 21
+Hello from string back 22
+Hello from string back 23
+Hello from string back 24
+Hello from string back 25
+Hello from string back 26
+Hello from string back 27
+Hello from string back 28
+Hello from string back 29
+Hello from string back 30
+Hello from string back 31
+Hello from string back 32
+Hello from string back 33
+Hello from string back 34
+Hello from string back 35
+Hello from string back 36
+Hello from string back 37
+Hello from string back 38
+Hello from string back 39
+Hello from string back 40
+Hello from string back 41
+Hello from string back 42
+Hello from string back 43
+Hello from string back 44
+Hello from string back 45
+Hello from string back 46
+Hello from string back 47
+Hello from string back 48
+Hello from string back 49
+DefaultCount  0
+CreateCount   100
+CopyCount     5050
+DestructCount 5050
+AssignCount   0
+==27640== 
+==27640== HEAP SUMMARY:
+==27640==     in use at exit: 2,630 bytes in 100 blocks
+==27640==   total heap usage: 5,451 allocs, 5,351 frees, 232,933 bytes allocated
+==27640== 
+==27640== Searching for pointers to 100 not-freed blocks
+==27640== Checked 179,288 bytes
+==27640== 
+==27640== 27 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==27640==    at 0x4A06A2E: malloc (vg_replace_malloc.c:270)
+==27640==    by 0x4036A6: String::String(String const&) (String.cc:43)
+==27640==    by 0x402F72: Vector<String>::Push_Front(String const&) (Vector.cc:151)
+==27640==    by 0x400EAA: Test1() (testVec.cc:42)
+==27640==    by 0x40298B: main (testVec.cc:278)
+==27640== 
+==27640== 2,603 bytes in 99 blocks are definitely lost in loss record 2 of 2
+==27640==    at 0x4A06A2E: malloc (vg_replace_malloc.c:270)
+==27640==    by 0x4036A6: String::String(String const&) (String.cc:43)
+==27640==    by 0x402EA8: Vector<String>::Push_Front(String const&) (Vector.cc:136)
+==27640==    by 0x400EAA: Test1() (testVec.cc:42)
+==27640==    by 0x40298B: main (testVec.cc:278)
+==27640== 
+==27640== LEAK SUMMARY:
+==27640==    definitely lost: 2,630 bytes in 100 blocks
+==27640==    indirectly lost: 0 bytes in 0 blocks
+==27640==      possibly lost: 0 bytes in 0 blocks
+==27640==    still reachable: 0 bytes in 0 blocks
+==27640==         suppressed: 0 bytes in 0 blocks
+==27640== 
+==27640== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 6 from 6)
+--27640-- 
+--27640-- used_suppression:      4 U1004-ARM-_dl_relocate_object
+--27640-- used_suppression:      2 glibc-2.5.x-on-SUSE-10.2-(PPC)-2a
+==27640== 
+==27640== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 6 from 6)

@@ -46,23 +46,6 @@ Complex Complex::operator*(const Complex& b) const
                  real*b.imag + imag*b.real);
 }
 
-Complex Complex::operator/(const Complex& b) const
-{
-  Complex tmp = (*this) * b.Conj();
-  Complex magSquared = b.Mag() * b.Mag();
-  if (magSquared.Mag().real == 0.0)
-    {
-      return Complex(); // jus zero in this cae
-    }
-  return Complex(tmp.real/magSquared.real, tmp.imag/magSquared.real);
-}
-
-
-// Complex Complex::operator/(const Complex& b) const
-// {
-//   return Complex(real/b.real, imag/ b.real);
-//   // THis needs some work
-// }
 
 // Member functions
 Complex Complex::Mag() const
@@ -84,13 +67,32 @@ void Complex::Print() const
 {
   double r = real;
   double i = imag;
+  if (fabs(i) < 1e-10) i = 0;
+  if (fabs(r) < 1e-10) r = 0;
 
-  cout << '(' << r << "," << i << ')';
+  if (i == 0)
+    { // just real part with no parens
+      cout << real;
+    }
+  else
+    {
+      cout << '(' << r << "," << i << ')';
+    }
 }
 
 // Global function to output a Complex value
 std::ostream& operator << (std::ostream &os, const Complex& c)
-{
-  os << '(' << c.real << "," << c.imag << ')';
+{ Complex c1(c);
+
+  if (fabs(c1.imag) < 1e-10) c1.imag = 0;
+  if (fabs(c1.real) < 1e-10) c1.real = 0;
+  if (c1.imag == 0)
+    { // just real part with no parens
+      os << c1.real;
+    }
+  else
+    {
+      os << '(' << c1.real << "," << c1.imag << ')';
+    }
   return os;
 }
